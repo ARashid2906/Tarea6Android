@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".MainActivityDescription"
+    tools:deviceIds="wear">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/inner_frame_layout_padding"
+            app:layout_boxedEdges="all"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/hello_world"
+                android:textStyle="bold"/>
+            <View android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#234F55">
+            </View>
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hello_world"
+                tools:text="Esta es mi descripcion"
+                android:layout_marginTop="10dp"
+                android:textSize="10sp"/>
+
+            <ImageView
+                android:id="@+id/icon_desc"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.wear.widget.BoxInsetLayout>
